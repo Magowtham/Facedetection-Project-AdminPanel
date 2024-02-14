@@ -1,0 +1,162 @@
+.students-table-container{
+  /* border: 2px solid rgb(0, 253, 21); */
+  height: 100%;
+  width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+  }
+
+  table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    max-width: 80px;
+  }
+
+  table th {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    padding: 20px;
+    background-color:#E85A4f;
+    color: #fff;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  table tbody {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #fff;
+  }
+
+  table td{
+    padding: 15px;
+  }
+
+  table tbody td button{
+    border: 0;
+    cursor: pointer;
+    background: 0;
+  }
+
+
+  table tbody td button:hover{
+    transform: scale(1.3);
+    transition: transform 0.1s ease-in;
+  }
+
+  @media screen and (max-width:1470px) and (min-width:1200px) {
+    table tbody .recharge-history-btn {
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    table tbody .expense-history-btn {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 10px;
+    }
+    
+  }
+  @media screen and (max-width: 1300px) {
+    table th {
+      padding: 10px;
+    }
+  
+    table td {
+      padding: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    thead tr {
+      display: none;
+    }
+    table td {
+      text-align: justify;
+      max-width: 100%;
+    }
+    tr {
+      margin: 0 0 1rem 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+  
+    tbody tr:before {
+      content: "";
+      display: block;
+      height: 1px;
+    }
+  
+    td {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+    td:nth-of-type(1) {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+    td:nth-of-type(2) {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+    td:nth-of-type(3) {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+    td:nth-of-type(4) {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+    td:nth-of-type(5) {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+  
+    td:before {
+      font-weight: bold;
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      padding: 8px;
+      color: mediumslateblue;
+      font-size: 1rem;
+    }
+  
+    td:nth-of-type(1):before {
+      content: "Sl. NO.";
+    }
+    td:nth-of-type(2):before {
+      content: "RFID NO.";
+    }
+    td:nth-of-type(3):before {
+      content: "Name";
+    }
+    td:nth-of-type(4):before {
+      content: "Roll Number";
+    }
+    td:nth-of-type(5):before {
+      content: "Balance";
+    }
+    table tbody .manage-sec {
+      display: flex;
+    }
+}

@@ -1,0 +1,117 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    background: black;
+    opacity: 0.6;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    /* border: 2px solid green; */
+}
+.home-sub-container{
+    /* border: 2px solid yellow; */
+    width: 80vw;
+    height: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.navigation-container{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    height: 20%;
+    min-height: 120px;
+    max-height: 150px;
+}
+
+.navigation-container h1{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.navigation-container button {
+    height: fit-content;
+    padding: 0;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.navigation-container button span{ 
+    font-size: 4.5rem;
+   color: #E85A4f;
+}
+
+.navigation-container button span.active{
+    color: rgb(43, 194, 43);
+}
+.popup-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.popup-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    width: 300px;
+    border-radius: 4px;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.popup-box.active{
+    visibility: visible;
+}
+
+.popup-box label{
+    color: #E85A4f;
+    font-size: 1rem;
+}
+
+.popup-box input{
+    margin-top:5px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.popup-box button{
+    margin-top:15px ;
+    padding: 12px 20px;
+    background-color: #E85A4f;
+    border: 0;
+    border-radius: 4px;
+}
+
+.popup-box button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
