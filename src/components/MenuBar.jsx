@@ -8,11 +8,11 @@ function MenuBar() {
   function switchPage(page){
       switch(page) {
         case 1:
-          navigate("/");
+          navigate("/home");
           setCurrentPage(1);
           break;
         case 2:
-          navigate("/form");
+          navigate("/home/form");
           setCurrentPage(2);
       }
   }

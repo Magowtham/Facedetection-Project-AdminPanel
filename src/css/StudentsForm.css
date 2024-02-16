@@ -43,9 +43,12 @@ form div{
 
 }
 form div label {
-    color: #E85A4f;
+    color: black;
     margin-top: 12px;
     font-size: 1rem;
+}
+form div label.error{
+    color: #E85A4f;
 }
 form div input{
     padding: 10px;
@@ -53,6 +56,10 @@ form div input{
     font-size: 1rem;
     border: 1px solid black;
     border-radius: 4px;
+}
+
+form div input.error{
+    border: 2px solid #E85A4f;
 }
 
 form button {

@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import FormOverlay from './FormOverlay';
 import "../css/Login.css"
 import { useNavigate } from 'react-router-dom';
 
@@ -18,10 +19,10 @@ function Login() {
 
   function formVaidater (){
     if (!userInput.email) {
-      setFormError({ userNameError: "UserName Required" });
+      setFormError({ emailError: "Email Required" });
       return false;
     } else if (!userInput.password) {
-      setFormError({ passwordError: "Password Required" });
+      setFormError({passwordError: "Password Required" });
       return false;
     } else {
       setFormError({ userNameError: "", passwordError: "" });
@@ -40,7 +41,7 @@ function Login() {
       const result = await response.json();
       switch (response.status) {
         case 200:
-          navigate("/")
+          navigate("/home")
           break;
         case 404:
           setFormError({ userNameError: result.error });
@@ -72,6 +73,7 @@ function Login() {
   return (
     <>
         <div className="login-page">
+          <FormOverlay isEnable={isFormLoading}/>
           <h1>Faculty Login</h1>
           <label>Email</label>
           <input type="text" name="email" onChange={handleFormInput}/>
